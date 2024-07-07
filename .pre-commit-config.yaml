@@ -3,24 +3,24 @@ repos:
     hooks:
       - id: flake8
         name: Run flake8
-        entry: poetry run flake8 .
+        entry: poetry run flake8 --exclude=".venv" .
         language: system
         types: [python]
 
       - id: mypy
         name: Run mypy
-        entry: poetry run mypy .
+        entry: poetry run mypy --exclude=".venv" .
         language: system
         types: [python]
 
       - id: black
         name: Run black
-        entry: poetry run black --check .
+        entry: poetry run black --check --exclude=".venv" .
         language: system
         types: [python]
 
       - id: isort
         name: Run isort
-        entry: poetry run isort --check-only .
+        entry: poetry run isort --check-only --skip=".venv" .
         language: system
         types: [python]
