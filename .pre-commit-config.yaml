@@ -3,7 +3,7 @@ repos:
     hooks:
       - id: flake8
         name: Run flake8
-        entry: poetry run flake8 --exclude=".venv" .
+        entry: poetry run flake8 --exclude=".venv"
         language: system
         types: [python]
 
