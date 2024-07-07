@@ -3,24 +3,24 @@ repos:
     hooks:
       - id: flake8
         name: Run flake8
-        entry: bash -c "echo 'Running flake8'; flake8 .; echo 'flake8 done'"
+        entry: poetry run flake8 .
         language: system
         types: [python]
 
       - id: mypy
         name: Run mypy
-        entry: bash -c "echo 'Running mypy'; mypy .; echo 'mypy done'"
+        entry: poetry run mypy .
         language: system
         types: [python]
 
       - id: black
         name: Run black
-        entry: bash -c "echo 'Running black'; black --check .; echo 'black done'"
+        entry: poetry run black --check .
         language: system
         types: [python]
 
       - id: isort
         name: Run isort
-        entry: bash -c "echo 'Running isort'; isort --check-only .; echo 'isort done'"
+        entry: poetry run isort --check-only .
         language: system
         types: [python]
