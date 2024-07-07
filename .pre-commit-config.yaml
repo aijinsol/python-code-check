@@ -9,18 +9,18 @@ repos:
 
       - id: mypy
         name: Run mypy
-        entry: poetry run mypy --exclude=".venv" .
+        entry: poetry run mypy --exclude=".venv"
         language: system
         types: [python]
 
       - id: black
         name: Run black
-        entry: poetry run black --check --exclude=".venv" .
+        entry: poetry run black --check --exclude=".venv"
         language: system
         types: [python]
 
       - id: isort
         name: Run isort
-        entry: poetry run isort --check-only --skip=".venv" .
+        entry: poetry run isort --check-only --skip=".venv"
         language: system
         types: [python]
